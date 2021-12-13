@@ -16,3 +16,626 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+.pio/build/project.checksum
+.pio/build/az-delivery-devkit-v4/idedata.json
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/.piopm
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/Adafruit_BusIO_Register.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/Adafruit_BusIO_Register.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/Adafruit_I2CDevice.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/Adafruit_I2CDevice.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/Adafruit_I2CRegister.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/Adafruit_SPIDevice.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/Adafruit_SPIDevice.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/library.properties
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/LICENSE
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/README.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/.github/ISSUE_TEMPLATE.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/.github/PULL_REQUEST_TEMPLATE.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/.github/workflows/githubci.yml
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/examples/i2c_address_detect/i2c_address_detect.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/examples/i2c_readwrite/i2c_readwrite.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/examples/i2c_registers/i2c_registers.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/examples/i2corspi_register/i2corspi_register.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/examples/spi_modetest/spi_modetest.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/examples/spi_readwrite/spi_readwrite.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/examples/spi_register_bits/spi_register_bits.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/examples/spi_registers/spi_registers.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/.gitignore
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/.piopm
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Adafruit_GFX.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Adafruit_GFX.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Adafruit_GrayOLED.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Adafruit_GrayOLED.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Adafruit_SPITFT_Macros.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Adafruit_SPITFT.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Adafruit_SPITFT.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/gfxfont.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/glcdfont.c
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/library.properties
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/license.txt
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/README.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/.github/ISSUE_TEMPLATE.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/.github/PULL_REQUEST_TEMPLATE.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/.github/workflows/githubci.yml
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMono9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMono12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMono18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMono24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoBold9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoBold12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoBold18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoBold24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoBoldOblique9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoBoldOblique12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoBoldOblique18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoBoldOblique24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoOblique9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoOblique12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoOblique18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeMonoOblique24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSans9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSans12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSans18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSans24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansBold9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansBold12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansBold18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansBold24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansBoldOblique9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansBoldOblique12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansBoldOblique18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansBoldOblique24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansOblique9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansOblique12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansOblique18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSansOblique24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerif9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerif12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerif18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerif24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifBold9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifBold12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifBold18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifBold24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifBoldItalic9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifBoldItalic12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifBoldItalic18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifBoldItalic24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifItalic9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifItalic12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifItalic18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/FreeSerifItalic24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/Org_01.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/Picopixel.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/Tiny3x3a2pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/Fonts/TomThumb.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/examples/GFXcanvas/GFXcanvas.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/examples/GFXcanvas/GFXcanvasSerialDemo.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/examples/GFXcanvas/GFXcanvasSerialDemo.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/examples/mock_ili9341/mock_ili9341.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/fontconvert/bdf2adafruit.py
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/fontconvert/fontconvert_win.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/fontconvert/fontconvert.c
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/fontconvert/Makefile
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/fontconvert/makefonts.sh
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/.clang-format
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/.gitattributes
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/.gitignore
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/.mbedignore
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/.piopm
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/.prettierignore
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/appveyor.yml
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/ArduinoJson.h
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/banner.svg
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/CHANGELOG.md
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/CMakeLists.txt
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/component.mk
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/CONTRIBUTING.md
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/keywords.txt
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/library.json
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/library.properties
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/LICENSE.md
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/README.md
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/SUPPORT.md
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/.devcontainer/devcontainer.json
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/.devcontainer/Dockerfile
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/JsonConfigFile/JsonConfigFile.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/JsonFilterExample/JsonFilterExample.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/JsonGeneratorExample/JsonGeneratorExample.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/JsonHttpClient/JsonHttpClient.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/JsonParserExample/JsonParserExample.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/JsonServer/JsonServer.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/JsonUdpBeacon/JsonUdpBeacon.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/MsgPackParser/MsgPackParser.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/ProgmemExample/ProgmemExample.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/examples/StringExample/StringExample.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson.h
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/CMakeLists.txt
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/compatibility.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Configuration.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Namespace.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/version.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Array/ArrayFunctions.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Array/ArrayImpl.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Array/ArrayIterator.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Array/ArrayRef.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Array/ArrayShortcuts.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Array/ElementProxy.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Array/Utilities.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Collection/CollectionData.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Collection/CollectionImpl.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/DeserializationError.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/deserialize.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/Filter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/NestingLimit.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/Reader.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStreamReader.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStringReader.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/Readers/FlashReader.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/Readers/IteratorReader.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/Readers/RamReader.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/Readers/StdStreamReader.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Deserialization/Readers/VariantReader.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Document/BasicJsonDocument.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Document/DynamicJsonDocument.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Document/JsonDocument.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Document/StaticJsonDocument.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Json/EscapeSequence.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Json/JsonDeserializer.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Json/JsonSerializer.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Json/Latch.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Json/PrettyJsonSerializer.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Json/TextFormatter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Json/Utf8.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Json/Utf16.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Memory/Alignment.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Memory/MemoryPool.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Misc/SerializedValue.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Misc/Visitable.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/MsgPack/endianess.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/MsgPack/ieee754.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackDeserializer.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackSerializer.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Numbers/arithmeticCompare.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Numbers/convertNumber.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Numbers/Float.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Numbers/FloatParts.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Numbers/FloatTraits.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Numbers/Integer.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Numbers/parseNumber.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Object/MemberProxy.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Object/ObjectFunctions.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Object/ObjectImpl.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Object/ObjectIterator.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Object/ObjectRef.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Object/ObjectShortcuts.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Object/Pair.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/alias_cast.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/assert.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/attributes.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/ctype.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/integer.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/limits.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/math.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace_generic.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/preprocessor.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/safe_strcmp.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/static_array.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/utility.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/mpl/max.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/conditional.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/declval.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/enable_if.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/integral_constant.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_array.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_base_of.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_class.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_const.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_convertible.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_enum.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_floating_point.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_integral.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_pointer.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_same.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_signed.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_unsigned.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_unsigned.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_void.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_const.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_cv.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_reference.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/type_identity.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/CountingDecorator.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/measure.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/serialize.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/Writer.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/Writers/ArduinoStringWriter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/Writers/DummyWriter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/Writers/PrintWriter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/Writers/StaticStringWriter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStreamWriter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStringWriter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/StringStorage/StringCopier.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/StringStorage/StringMover.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/StringStorage/StringStorage.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/IsWriteableString.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/StoragePolicy.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/String.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/StringAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/StringAdapters.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/Adapters/ArduinoStringAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/Adapters/ConstRamStringAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/Adapters/FlashStringAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/Adapters/JsonStringAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/Adapters/RamStringAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedFlashStringAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedRamStringAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/Adapters/StdStringAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Strings/Adapters/StringViewAdapter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/Converter.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/ConverterImpl.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/SlotFunctions.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantCompare.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantContent.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantData.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantFunctions.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantImpl.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantOperators.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantRef.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantShortcuts.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantSlot.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantTag.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/VariantTo.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoJson/src/ArduinoJson/Variant/Visitor.hpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/.gitignore
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/.piopm
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/.travis.yml
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/ArduinoLog.cpp
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/ArduinoLog.h
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/keywords.txt
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/library.json
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/library.properties
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/LICENSE.md
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/README.md
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/examples/Log-advanced/Log-advanced.ino
+.pio/libdeps/az-delivery-devkit-v4/ArduinoLog/examples/Log-basic/Log-basic.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/.piopm
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/ConnectingHardware.md
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/CONTRIBUTING.md
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/issue_template.md
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/library.properties
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/LICENSE
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/README.md
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Example/GxEPD2_display_selection_added.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Example/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Example/GxEPD2_display_selection.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Example/GxEPD2_Example.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Example/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Example/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/BitmapDisplay.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/BitmapDisplay.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/GxEPD2_display_selection_added.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/GxEPD2_display_selection.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/GxEPD2_GFX_Example.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/TextDisplay.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_GFX_Example/TextDisplay.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_HelloWorld/GxEPD2_display_selection_added.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_HelloWorld/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_HelloWorld/GxEPD2_display_selection.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_HelloWorld/GxEPD2_HelloWorld.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_HelloWorld/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_HelloWorld/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_MinimumExample/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_MinimumExample/GxEPD2_MinimumExample.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_MinimumExample/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_MinimumExample/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_MultiDisplayExample/GxEPD2_MultiDisplayExample.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_NotPagedExample/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_NotPagedExample/GxEPD2_NotPagedExample.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_NotPagedExample/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_NotPagedExample/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_PagedDisplayUsingCallback/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_PagedDisplayUsingCallback/GxEPD2_PagedDisplayUsingCallback.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_PagedDisplayUsingCallback/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_PagedDisplayUsingCallback/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_AVR_Example/GxEPD2_SD_AVR_boards_added.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_AVR_Example/GxEPD2_SD_AVR_Example.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_AVR_Example/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/GxEPD2_SD_Example.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/5in65f3.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/bb4.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/betty_1.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/Bitmap640x384_1.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/Bitmap640x384_2.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/eighth200x200.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/fifth200x200.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/first200x200.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/fourth200x200.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/LOGO.BMP
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/logo200x200.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/parrot.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/second200x200.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/senventh200x200.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/sixth200x200.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_Example/bitmaps/third200x200.bmp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SD_WriteBitmap/GxEPD2_SD_WriteBitmap.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SerialFlash_Example/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SerialFlash_Example/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SerialFlash_Example/GxEPD2_SerialFlash_Example.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SerialFlash_Example/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_SerialFlash_Loader/GxEPD2_SerialFlash_Loader.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Spiffs_Example/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Spiffs_Example/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Spiffs_Example/GxEPD2_Spiffs_Example.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Spiffs_Example/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Spiffs_Example/SPIFFS_Support.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Spiffs_Loader/GxEPD2_Spiffs_Loader.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_Spiffs_Loader/SPIFFS_Support.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_U8G2_Fonts_Example/GxEPD2_display_selection_new_style.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_U8G2_Fonts_Example/GxEPD2_selection_check.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_U8G2_Fonts_Example/GxEPD2_U8G2_Fonts_Example.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_U8G2_Fonts_Example/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_WS_ESP32_Driver/GxEPD2_WS_ESP32_Driver.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_WiFi_Example/GxEPD2_WiFi_Example.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2_WiFi_Example/GxEPD2_wiring_examples.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2x_FastBlackWhiteOnColor/GxEPD2x_FastBlackWhiteOnColor.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/examples/GxEPD2x_MixedTest/GxEPD2x_MixedTest.ino
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/GxEPD2_3C.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/GxEPD2_7C.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/GxEPD2_BW.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/GxEPD2_EPD.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/GxEPD2_EPD.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/GxEPD2_GFX.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/GxEPD2.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps3c104x212.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps3c128x296.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps3c176x264.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps3c200x200.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps3c400x300.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps3c800x480.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps3c880x528.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps80x128.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps104x212.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps128x250.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps128x296.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps152x152.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps152x296.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps176x264.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps200x200.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps240x416.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps400x300.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps640x384.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps648x480.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps800x480.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/Bitmaps1304x984.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/WS_Bitmaps3c104x212.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/WS_Bitmaps3c128x296.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/WS_Bitmaps3c200x200.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/WS_Bitmaps3c400x300.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/WS_Bitmaps7c192x143.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/WS_Bitmaps80x128.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/WS_Bitmaps104x212.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/WS_Bitmaps176x264.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/bitmaps/WS_Bitmaps800x600.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_102.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_102.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154_D67.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154_D67.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154_M09.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154_M09.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154_M10.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154_M10.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154_T8.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154_T8.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_154.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_B72.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_B72.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_B73.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_B73.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_B74.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_B74.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_flex.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_flex.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_M21.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_M21.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_T5D.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213_T5D.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_213.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_260_M01.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_260_M01.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_260.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_260.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_270.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_270.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_I6FD.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_I6FD.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_M06.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_M06.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_T5.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_T5.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_T5D.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_T5D.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_T94_V2.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_T94_V2.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_T94.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290_T94.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_290.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_371.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_371.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_420_M01.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_420_M01.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_420.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_420.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_583_T8.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_583_T8.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_583.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_583.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_750_T7.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_750_T7.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_750.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_750.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_1160_T91.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_1160_T91.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_1248.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd/GxEPD2_1248.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_154_Z90c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_154_Z90c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_154c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_154c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_213_Z19c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_213_Z19c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_213c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_213c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_270c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_270c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_290_C90c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_290_C90c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_290_Z13c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_290_Z13c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_290c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_290c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_420c_Z21.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_420c_Z21.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_420c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_420c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_565c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_565c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_583c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_583c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_750c_Z08.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_750c_Z08.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_750c_Z90.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_750c_Z90.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_750c.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/epd3c/GxEPD2_750c.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/it8951/GxEPD2_it60_1448x1072.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/it8951/GxEPD2_it60_1448x1072.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/it8951/GxEPD2_it60.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/it8951/GxEPD2_it60.h
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/it8951/GxEPD2_it78_1872x1404.cpp
+.pio/libdeps/az-delivery-devkit-v4/GxEPD2/src/it8951/GxEPD2_it78_1872x1404.h
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/.piopm
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/keywords.txt
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/library.properties
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/LICENSE
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/README.md
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/examples/Boxed_Text_Adafruit_SSD1306/Boxed_Text_Adafruit_SSD1306.ino
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/examples/Hello_Adafruit_ILI9341/Hello_Adafruit_ILI9341.c
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/examples/Hello_Adafruit_SSD1306/Hello_Adafruit_SSD1306.ino
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/examples/Shennong/Shennong.ino
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/examples/Shennong_IL9341/Shennong_IL9341.ino
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/examples/Unicode_Adafruit_SSD1306/Unicode_Adafruit_SSD1306.ino
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/src/u8g2_fonts.c
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/src/u8g2_fonts.h
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/src/U8g2_for_Adafruit_GFX.cpp
+.pio/libdeps/az-delivery-devkit-v4/U8g2_for_Adafruit_GFX/src/U8g2_for_Adafruit_GFX.h
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/.editorconfig
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/.gitignore
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/.piopm
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/CHANGELOG.md
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/keywords.txt
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/library.json
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/library.properties
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/LICENSE
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/Makefile
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/README.md
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/.github/ISSUE_TEMPLATE/bug_report.md
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/.github/ISSUE_TEMPLATE/feature_request.md
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/.github/ISSUE_TEMPLATE/question.md
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/.github/workflows/build-examples-master.yml
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/.github/workflows/build-examples-pr.yml
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Async-Server/Async-Server.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Authentication/Authentication.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/HTML-Forms/HTML-Forms.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/HTTPS-and-HTTP/HTTPS-and-HTTP.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Middleware/Middleware.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Parameter-Validation/Parameter-Validation.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Parameters/Parameters.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Put-Post-Echo/Put-Post-Echo.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/REST-API/.ci_lib_deps
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/REST-API/REST-API.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Self-Signed-Certificate/Self-Signed-Certificate.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Static-Page/favicon.h
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Static-Page/Static-Page.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/examples/Websocket-Chat/Websocket-Chat.ino
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/create_cert.sh
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/esp32_https_server.doxyfile
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/Makefile
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/README.md
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/ci/README.md
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/ci/scripts/build-all-examples.sh
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/ci/scripts/build-example.sh
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/ci/scripts/pio-to-gh-log.py
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/ci/templates/example-project/partitions_wroom.csv
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/ci/templates/example-project/partitions_wrover.csv
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/ci/templates/example-project/platformio.ini
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/docs/esp32_https_server_classes.uxf
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/docs/README.md
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/legacy/https_server.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/legacy/https_server.h
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/extras/legacy/README.md
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ConnectionContext.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ConnectionContext.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPBodyParser.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPConnection.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPConnection.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPHeader.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPHeader.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPHeaders.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPHeaders.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPMiddlewareFunction.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPMultipartBodyParser.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPMultipartBodyParser.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPNode.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPNode.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPRequest.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPRequest.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPResponse.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPResponse.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPSCallbackFunction.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPSConnection.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPSConnection.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPServer.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPServer.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPSServer.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPSServer.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPSServerConstants.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPURLEncodedBodyParser.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPURLEncodedBodyParser.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPValidator.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/HTTPValidator.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ResolvedResource.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ResolvedResource.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ResourceNode.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ResourceNode.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ResourceParameters.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ResourceParameters.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ResourceResolver.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ResourceResolver.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/SSLCert.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/SSLCert.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/util.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/util.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ValidatorFunctions.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/ValidatorFunctions.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/WebsocketHandler.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/WebsocketHandler.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/WebsocketInputStreambuf.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/WebsocketInputStreambuf.hpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/WebsocketNode.cpp
+.pio/libdeps/az-delivery-devkit-v4/esp32_https_server/src/WebsocketNode.hpp
+.vscode/c_cpp_properties.json
+.vscode/extensions.json
+.vscode/launch.json
