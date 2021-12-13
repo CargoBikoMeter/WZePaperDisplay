@@ -22,7 +22,7 @@ WZePaperDisplay is an ESP32 based application in a photo frame to display mobili
  * Device configuration via web server GUI, which could be started via on-board button
    * WiFi configuration (empty password for free WiFi networks possible)
    * selectable Timezone and NTP server
-   * Language support: DE, EN, FR, NL, ES, SL
+   * Language support: DE, EN, ES, FR, NL, SL
    * Telraam configuration: API key and segment id
    * Expert menu for special configuration parameters 
    * Firmware upload via WiFi
