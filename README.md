@@ -75,11 +75,11 @@ The e-Paper HAT cables has to be connected to the following ESP32 NodeMCU pins:
 
 | HAT  color  |   JOY-iT  |   AZ-Delivery    |   comment
 |-------------|-----------|------------------|---------------
-| VSS  grey   |    3V3    |
+| VSS  grey   |    3V3    |  3V3
 | GND  brown  |    GND    |  GND next to G23 |
-| DIN  blue   |    D23    |  G23             |  VSPI-MOSI
-| CLK  yellow |    D18    |  G18             |  VSPI_CLK
-| CS   orange |    D5     |  G5              |  VSPI_CS
+| DIN  blue   |    D23    |  G23             |  MOSI
+| CLK  yellow |    D18    |  G18             | 
+| CS   orange |    D5     |  G5              |
 | DC   green  |    D22    |  G22             |
 | RST  white  |    D21    |  G21             |
 | BUSY violet |    D4     |  G4              |
