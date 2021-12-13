@@ -72,16 +72,17 @@ If using an older version of ePaper driver HAT 2.1 following line has to be comm
 If you want to switch the logging level during development switch the definition from LOGLEVEL LOG_LEVEL_INFO to LOGLEVEL LOG_LEVEL_VERBOSE in file globals.h.
 
 The e-Paper HAT cables has to be connected to the following ESP32 NodeMCU pins:
-  HAT  color     JOY-iT     AZ-Delivery       comment
 
-* VSS  grey:     3V3
-* GND  brown:    GND        GND next to G23
-* DIN  blue:     D23        G23               VSPI-MOSI
-* CLK  yellow:   D18        G18               VSPI_CLK
-* CS   orange:   D5         G5                VSPI_CS
-* DC   green:    D22        G22
-* RST  white:    D21        G21
-* BUSY violet:   D4         G4
+| HAT  color  |   JOY-iT  |   AZ-Delivery    |   comment
+|-------------|-----------|------------------|---------------
+| VSS  grey   |    3V3    |
+| GND  brown  |    GND    |  GND next to G23 |
+| DIN  blue   |    D23    |  G23             |  VSPI-MOSI
+| CLK  yellow |    D18    |  G18             |  VSPI_CLK
+| CS   orange |    D5     |  G5              |  VSPI_CS
+| DC   green  |    D22    |  G22             |
+| RST  white  |    D21    |  G21             |
+| BUSY violet |    D4     |  G4              |
 
 
 ## Mechanical Construction
@@ -101,17 +102,17 @@ After powering on the device for the first time the device must be configured. T
 
 Attention: If the BOOT button will be pressed for more the 20 seconds all currently saved configuration data will be deleted.
 
-After releasing the BOOT button the e-Paper display shows the configuration mode messages and is waiting for 240 seconds that the user connects to the webserver configuration access point. The name of the wifi access point and the access password is displayed on the e-Paper display.
+After releasing the BOOT button the e-Paper display shows the configuration mode messages and is waiting for 240 seconds that the user connects to the webserver configuration access point. The name of the WiFi access point and the access password is displayed on the e-Paper display.
 
-After connecting to the wifi access point the WZePaperDisplay GUI can be called up in the web browser with the following URL: http://172.20.0.1
+After connecting to the WiFi access point the WZePaperDisplay GUI can be called up in the web browser with the following URL: http://172.20.0.1
 
 The WZePaperDisplay shows the "Https Redirect" page, which must be confirmed via button "Goto https". The browser warning must be accepted, because the device has only a self-signed SSL certificate.
 
 Now the main navigation menu will appear and the initial device configuration can be started.
 
-In menu "Configuration mode" the mode of configuration can be switched between ExpertMode=off (Default) an ExpertMode=on. ExpertMode=on allows the configuration of special configuration parameters. Depending on the setting of ExpertMode the menu "General" shows the associated configuration parameters. 
+In menu "Configuration mode" the mode of configuration can be switched between ExpertMode=off (Default) and ExpertMode=on. ExpertMode=on allows the configuration of special configuration parameters. Depending on the setting of ExpertMode the menu "General" shows the associated configuration parameters. 
 
-All configuration parameters are explained in the menus. All optional parameters ore parameter sections are marked as optional in the menus, so all other paramters muss be filled. If a required parameter is not filled, the Button "Save" does not work. After a successfull "Save" the parameters are permanently saved in a non-volatile storeage (NVS) of the ESP32 device.
+All configuration parameters are explained in the menus. All optional parameters or parameter sections are marked as optional in the menus, so all other paramters muss be filled. If a required parameter is not filled, the Button "Save" does not work. After a successfull "Save" the parameters are permanently saved in a non-volatile storage (NVS) of the ESP32 device.
 
 If all required parameters are defined the device can be restarted with the menu button "Reboot and activate configuration" or by switching power off and on. All required configuration parameters will be checked during first startup. If there is any parameter missing it will be shown on the e-Paper display and the configuration webserver will be started automatically.
 
