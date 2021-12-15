@@ -39,7 +39,7 @@ Device components:
  * Waveshare 7,5" e-Paper display with e-Paper driver HAT
    * s/w model: 750_T7 800x480  (https://www.berrybase.de : Item: RPI-EINK75)
    * color model: 750c_Z90 (it works, but not recommended due to the longer display refresh time)
- * experimental board 40x60 mm 
+ * experimental board 50x100 mm 
  * two 16 pin header for ESP32
  * one 16 angled pin header for connecting e-Paper driver HAT cable
  * cylinder head screw, slotted, M2, 8 mm
