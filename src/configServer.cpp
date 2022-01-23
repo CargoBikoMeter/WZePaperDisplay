@@ -159,24 +159,24 @@ void readConfigurationData() {
   hb_apiurl.toCharArray(WZConfig.hb_apiurl,hb_apiurl.length()+1);
   hb_authkey.toCharArray(WZConfig.hb_authkey,hb_authkey.length()+1);
 
-  // Log.verbose(F("readConfigurationData: print configuration data read from NVM"));
-  // Log.info(F("WIFI_SSID: %s"), WZConfig.WIFI_SSID);
-  // Log.info(F("WIFI_PASSWORD: %s"), WZConfig.WIFI_PASSWORD);
-  // Log.verbose(F("AP_PASSWORD: %s"), WZConfig.AP_PASSWORD);
-  // Log.verbose(F("Project URL: %s"), WZConfig.project_url);
-  // Log.verbose(F("Telraam API key: %s"), WZConfig.tr_apikey);
-  // Log.verbose(F("Telraam segment id: %s"), WZConfig.tr_segmentid);
-  // Log.verbose(F("Telraam segment name: %s"), WZConfig.tr_segmentname);
-  // Log.verbose(F("wake-up time: %s"), WZConfig.tr_WakeupTime);
-  // Log.verbose(F("sleep time: %s"), WZConfig.tr_SleepTime);
-  // Log.verbose(F("update minute: %s"), WZConfig.tr_UpdateMinute);
-  // Log.verbose(F("Language: %s"), WZConfig.Language);
-  // Log.verbose(F("Timezone: %s"), WZConfig.Timezone);
-  // Log.verbose(F("ntpServer: %s"), WZConfig.ntpServer);
-  // Log.verbose(F("gmtOffset: %s"), WZConfig.gmtOffset);
-  // Log.verbose(F("daylightOffset: %s"), WZConfig.daylightOffset);
-  // Log.verbose(F("hb_apiurl: %s"), WZConfig.hb_apiurl);
-  // Log.verbose(F("hb_authkey: %s"), WZConfig.hb_authkey);
+  Log.verbose(F("readConfigurationData: print configuration data read from NVM"));
+  Log.verbose(F("WIFI_SSID: %s"), WZConfig.WIFI_SSID);
+  Log.verbose(F("WIFI_PASSWORD: %s"), WZConfig.WIFI_PASSWORD);
+  Log.verbose(F("AP_PASSWORD: %s"), WZConfig.AP_PASSWORD);
+  Log.verbose(F("Project URL: %s"), WZConfig.project_url);
+  Log.verbose(F("Telraam API key: %s"), WZConfig.tr_apikey);
+  Log.verbose(F("Telraam segment id: %s"), WZConfig.tr_segmentid);
+  Log.verbose(F("Telraam segment name: %s"), WZConfig.tr_segmentname);
+  Log.verbose(F("wake-up time: %s"), WZConfig.tr_WakeupTime);
+  Log.verbose(F("sleep time: %s"), WZConfig.tr_SleepTime);
+  Log.verbose(F("update minute: %s"), WZConfig.tr_UpdateMinute);
+  Log.verbose(F("Language: %s"), WZConfig.Language);
+  Log.verbose(F("Timezone: %s"), WZConfig.Timezone);
+  Log.verbose(F("ntpServer: %s"), WZConfig.ntpServer);
+  Log.verbose(F("gmtOffset: %s"), WZConfig.gmtOffset);
+  Log.verbose(F("daylightOffset: %s"), WZConfig.daylightOffset);
+  Log.verbose(F("hb_apiurl: %s"), WZConfig.hb_apiurl);
+  Log.verbose(F("hb_authkey: %s"), WZConfig.hb_authkey);
 
   preferences.end();
 }

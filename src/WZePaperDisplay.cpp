@@ -61,6 +61,8 @@ extern int  configServerUptimeMax;
 extern void eraseConfigData();
 extern WZConfig_s WZConfig;
 
+const char *WZVersion = "1.0.1";
+
 // pin for reading commands, commands depends from the time the button is pressed
 // calibration command: button more then 10 seconds pressed 
 const uint8_t buttonPin       = 0;     // command button: USER (BOOT) button on device is GPIO0
@@ -74,7 +76,7 @@ const uint8_t START_CONFIG_SERVER_COUNTER = 15;  // < 15s: start configuration s
 const uint8_t CONFIG_RESET_COUNTER        = 20; //  > 20s: reset config data in NVS flash area
 bool  ConfigError = false;
 
-const char *WZVersion = "1.0.0";
+bool TrafficSumValid = false;      // ensures display updates only with valid data 
 
 String wzDeviceId, wzWiFiId;
 
@@ -87,13 +89,21 @@ String wzDeviceId, wzWiFiId;
 uint16_t TIME_TO_SLEEP = 3600;     // one hour deep sleep time (seconds)
 
 // we count the boot cycles after powering up the device
-RTC_DATA_ATTR int BootCount = 0;  // saved in RTC memory area
+RTC_DATA_ATTR int BootCount = 0;       // saved in RTC memory area
+RTC_DATA_ATTR int DailyTrafficSum = 0; // summarized daily traffic data
+RTC_DATA_ATTR int SavedDay = 0;        // required for resetting DailyTrafficSum at the beginning of each day
+RTC_DATA_ATTR int WiFiConnectionsFailed = 0;     // count failed WiFi connection attempts
+RTC_DATA_ATTR int NTPRequestsFailed = 0;         // count failed attempts to get traffic data
+RTC_DATA_ATTR int TRAPIError = 0;                // count Telraam API errors
+RTC_DATA_ATTR int TrafficDataRequestsFailed = 0; // count failed attempts to get traffic data
+RTC_DATA_ATTR int SendHeartbeatsFailed = 0;      // count failed attempts to send data to heartbeat server
+
 
 String  Time_str, Date_str;
-uint8_t wifi_signal, CurrentHour = 0, CurrentMin = 0, CurrentSec = 0;
+uint8_t wifi_signal, CurrentHour = 0, CurrentMin = 0, CurrentSec = 0, CurrentDay;
 
 int httpStatus = 0;
-int httpConnectionAttempts = 0; // number of HTTP connection attempts
+int httpConnectionAttempts; // number of HTTP connection attempts
 HTTPClient http;
 StaticJsonDocument<600> request;
 String httpMessage;
@@ -566,14 +576,18 @@ uint8_t startWiFi() {
     //Log.info(F("WiFi connected at: %s"), WiFi.localIP().toString());
   } else { 
     Log.error(F("ERROR: WiFi connection *** FAILED ***"));
-    sprintf(display_message_buffer, "ERROR: WiFi connection failed - check WiFi configuration");
-    displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
+    WiFiConnectionsFailed++;
+    Log.error(F("ERROR: WiFiConnectionsFailed counter: >%d<"), WiFiConnectionsFailed);
+    if ( BootCount == 1  ) {
+      sprintf(display_message_buffer, "ERROR: WiFi connection failed - check WiFi configuration");
+      displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
 
-    sprintf(display_message_buffer, "current SSID: >%s<", WZConfig.WIFI_SSID);
-    displayMessage(display_message_buffer, wzGenInfoLine+25, u8g2_font_lubB14_tf);
+      sprintf(display_message_buffer, "current SSID: >%s<", WZConfig.WIFI_SSID);
+      displayMessage(display_message_buffer, wzGenInfoLine+25, u8g2_font_lubB14_tf);
 
-    sprintf(display_message_buffer, "device restarts in 5 minutes");
-    displayMessage(display_message_buffer, wzGenInfoLine+50, u8g2_font_lubB14_tf);
+      sprintf(display_message_buffer, "device restarts in 5 minutes");
+      displayMessage(display_message_buffer, wzGenInfoLine+50, u8g2_font_lubB14_tf);
+    }
   }  
   Log.verbose(F("WiFi connection status: %d"), connectionStatus);
   return connectionStatus;
@@ -585,7 +599,13 @@ boolean UpdateLocalTime() {
   struct tm timeinfo;
   char   time_output[30], day_output[30], update_time[30];
   while (!getLocalTime(&timeinfo, 10000)) { // Wait for 10-sec for time to synchronize
-    Log.error(F("ERROR: Failed to obtain time"));
+    Log.error(F("ERROR: Failed to obtain time from NTP server"));
+    NTPRequestsFailed++;
+    Log.error(F("ERROR: NTPRequestsFailed counter: >%d<"), NTPRequestsFailed);
+    if ( BootCount == 1  ) {
+      sprintf(display_message_buffer, "ERROR: Failed to obtain time from NTP server");
+      displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
+    }
     return false;
   }
 
@@ -594,6 +614,15 @@ boolean UpdateLocalTime() {
   CurrentHour = timeinfo.tm_hour;
   CurrentMin  = timeinfo.tm_min;
   CurrentSec  = timeinfo.tm_sec;
+  CurrentDay  = timeinfo.tm_mday;
+
+  Log.verbose(F("CurrentDay: %d - SavedDay: %d"), CurrentDay, SavedDay);
+  // save CurrentDay into RTC menory, if a new day has arrived and reset DailyTrafficSum
+  if ( CurrentDay > SavedDay ) {
+    SavedDay = CurrentDay;
+    DailyTrafficSum = 0; 
+    Log.verbose(F("new day has arrived, DailyTrafficSum resettet: %d"), DailyTrafficSum);
+  }
  
   if ( ! strcmp(WZConfig.Language,"DE") ) {
     sprintf(day_output, "%s, %02u. %s %04u", weekday_D_DE[timeinfo.tm_wday], timeinfo.tm_mday, month_M_DE[timeinfo.tm_mon], (timeinfo.tm_year) + 1900); // day_output >> So., 23. Juni 2019 <<
@@ -691,7 +720,8 @@ bool getTrafficData(WiFiClient& client) {
   // Serial.println(httpMessage);
   
   // now try to get the traffic data
-  while ( ( httpConnectionAttempts < 5 ) && ( httpStatus != 200 )  ) {
+  httpConnectionAttempts = 0;
+  while ( ( httpConnectionAttempts < 6 ) && ( httpStatus != 200 )  ) {
     client.stop(); // close connection before sending a new request
 
     // Send request
@@ -703,18 +733,21 @@ bool getTrafficData(WiFiClient& client) {
     httpStatus = http.POST(httpMessage);
     httpConnectionAttempts++;
     Log.verbose(F("httpConnectionAttempts: >%d< - HTTP httpStatus is: >%d<"), httpConnectionAttempts, httpStatus);
-    
+   
     if ( httpStatus != 200 ) {
-      Log.verbose(F("Wait some seconds before next attempt"));
-      delay(30000); // wait some seconds for next connection attempt
+      Log.verbose(F("Wait 10 seconds before next attempt"));
+      delay(10000); // wait 10 seconds for next connection attempt
     }
   }
 
-  // send error message to ePaper display to inform the user
   if ( httpStatus != 200 ) {
     Log.error(F("ERROR: HTTP httpStatus is: >%d<"), httpStatus);
-    sprintf(display_message_buffer, "ERROR: Telraam connection failed after %d attempts, HTTP httpStatus: >%d<", httpConnectionAttempts, httpStatus);
-    displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
+    TrafficDataRequestsFailed++;
+    Log.error(F("ERROR: TrafficDataRequestsFailed counter: >%d<"), TrafficDataRequestsFailed);
+    if ( BootCount == 1  ) {  // send error message to display
+      sprintf(display_message_buffer, "ERROR: traffic data connection failed: %d attempts, Status: >%d<", httpConnectionAttempts, httpStatus);
+      displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
+    }
     return false; // break data processing
   }
 
@@ -737,13 +770,15 @@ bool getTrafficData(WiFiClient& client) {
   Log.verbose(F("message: %s"), root["message"].as<const char *>());
 
   if ( status_code != 200 ) {
-    Log.error(F("ERROR: Telraam API returned status_code: >%d<"), status_code);
-    sprintf(display_message_buffer, "ERROR: Telraam API returned status_code: >%d<", status_code);
-    displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
+    Log.error(F("ERROR: Telraam API returned status_code: >%s<"), String(status_code));
+    TRAPIError++;
+    if ( BootCount == 1 ) {
+      sprintf(display_message_buffer, "ERROR: Telraam API returned status_code: >%d<", status_code);
+      displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
 
-    sprintf(display_message_buffer, "current segment id: >%s<", WZConfig.tr_segmentid);
-    displayMessage(display_message_buffer, wzGenInfoLine+25, u8g2_font_lubB14_tf);
-
+      sprintf(display_message_buffer, "current segment id: >%s<", WZConfig.tr_segmentid);
+      displayMessage(display_message_buffer, wzGenInfoLine+25, u8g2_font_lubB14_tf);
+    }
     return false; // break data processing
   }
 
@@ -777,23 +812,37 @@ bool getTrafficData(WiFiClient& client) {
     cars_daily = cars_daily + cars_last_hour;
     heavy_vehicles_daily = heavy_vehicles_daily + heavy_vehicles_last_hour;
     daily_traffic_sum = pedestrians_daily + bicycles_daily + cars_daily + heavy_vehicles_daily;
+
+  }
+
+  // save current traffic data sum into RTC memory
+  // this prevents display updates in the case that the sum of fetched traffic data is lower than 
+  // the last sum of the same day - this could happen if something was wrong during the communication 
+  // to the Telraam API
+  if ( (int)daily_traffic_sum >= DailyTrafficSum ) {
+    Log.verbose(F("new traffic data sum: update RTC variable DailyTrafficSum"));
+    DailyTrafficSum = daily_traffic_sum;
+    TrafficSumValid = true;
+  } else {
+    TrafficSumValid = false; // don't update traffic data on display
   }
 
   Log.verbose(F("print traffic report data..."));
   // print last hour data
   Log.verbose(F("last hour results from number of report records: %s"), String(report_records));
-  Log.verbose(F("Pedestrians: %s"), String(round(pedestrians_last_hour)));
-  Log.verbose(F("Bicycles: %s"), String(round(bicycles_last_hour)));
-  Log.verbose(F("Cars: %s"), String(round(cars_last_hour)));   
-  Log.verbose(F("Heavy Cars: %s"), String(round(heavy_vehicles_last_hour)));
-  Log.verbose(F("V85 speed: %s"), String(round(v85_speed)));
+  Log.verbose(F("Pedestrians: %s"), String(pedestrians_last_hour));
+  Log.verbose(F("Bicycles: %s"), String(bicycles_last_hour));
+  Log.verbose(F("Cars: %s"), String(cars_last_hour));   
+  Log.verbose(F("Heavy Cars: %s"), String(heavy_vehicles_last_hour));
+  Log.verbose(F("V85 speed: %s"), String(v85_speed));
   // print daily summary
-  Log.verbose(F("daily summary results from number of report records: %s"), String(report_records));
-  Log.verbose(F("Pedestrians: %s"), String(round(pedestrians_daily)));
-  Log.verbose(F("Bicycles: %s"), String(round(bicycles_daily)));
-  Log.verbose(F("Cars: %s"), String(round(cars_daily)));   
-  Log.verbose(F("Heavy Cars: %s"), String(round(heavy_vehicles_daily)));
-  Log.verbose(F("Daily_Traffic_Sum: %s"), String(round(daily_traffic_sum)));
+  Log.verbose(F("daily summary results from number of report records: %d"), report_records);
+  Log.verbose(F("Pedestrians daily: %s"), String(pedestrians_daily));
+  Log.verbose(F("Bicycles daily: %s"), String(bicycles_daily));
+  Log.verbose(F("Cars daily: %s"), String(cars_daily));   
+  Log.verbose(F("Heavy Cars daily: %s"), String(heavy_vehicles_daily));
+  Log.verbose(F("daily_traffic_sum daily: %s"), String(daily_traffic_sum));
+  Log.verbose(F("RTC DailyTrafficSum: %s - TrafficSumValid: %s"), String(DailyTrafficSum), String(TrafficSumValid));
 
   // Disconnect
   client.stop();
@@ -873,49 +922,57 @@ void displayTrafficData()
     u8g2Fonts.setCursor(xColumn1, wzPedestriansLine);
     u8g2Fonts.print(wzPedestriansStr);
     // get the pre-decimal places to calculate the x start position
-    itoa((int)(pedestrians_daily), DataStr,10);
+    itoa((int)round(pedestrians_daily), DataStr,10);
+    Log.verbose(F("pedestrians_daily: %s - DataStr: %s"), String(pedestrians_daily), DataStr);
+    Log.verbose(F("pedestrians_daily width: %d"), u8g2Fonts.getUTF8Width(DataStr));
     // now calculate the current x position to the left beginning from fixed xColumn2
     u8g2Fonts.setCursor(xColumn2 - u8g2Fonts.getUTF8Width(DataStr), wzPedestriansLine);
     u8g2Fonts.print((int)round(pedestrians_daily));
 
     // print pedestrians counted last hour    
-    itoa((int)(pedestrians_last_hour), DataStr,10);
+    itoa((int)round(pedestrians_last_hour), DataStr,10);
     u8g2Fonts.setCursor(xColumn4 - u8g2Fonts.getUTF8Width(DataStr), wzPedestriansLine);
     u8g2Fonts.print((int)round(pedestrians_last_hour));
 
     // print bicycles_daily
     u8g2Fonts.setCursor(xColumn1, wzBicyclesLine);
     u8g2Fonts.print(wzBicyclesStr);
-    itoa((int)(bicycles_daily), DataStr,10);
+    itoa((int)round(bicycles_daily), DataStr,10);
+    Log.verbose(F("bicycles_daily: %s - DataStr: %s"), String(bicycles_daily), DataStr);
+    Log.verbose(F("bicycles_daily width: %d"), u8g2Fonts.getUTF8Width(DataStr));
     u8g2Fonts.setCursor(xColumn2 - u8g2Fonts.getUTF8Width(DataStr), wzBicyclesLine);
     u8g2Fonts.print((int)round(bicycles_daily));
 
     // print bicycles counted last hour
-    itoa((int)(bicycles_last_hour), DataStr,10);
+    itoa((int)round(bicycles_last_hour), DataStr,10);
     u8g2Fonts.setCursor(xColumn4 - u8g2Fonts.getUTF8Width(DataStr), wzBicyclesLine);
     u8g2Fonts.print((int)round(bicycles_last_hour));
 
     // print cars_daily
     u8g2Fonts.setCursor(xColumn1, wzCarsLine);
     u8g2Fonts.print(wzCarsStr);
-    itoa((int)(cars_daily), DataStr,10);
+    itoa((int)round(cars_daily), DataStr,10);
+    Log.verbose(F("cars_daily: %s - DataStr: %s"), String(cars_daily), DataStr);
+    Log.verbose(F("cars_daily width: %d"), u8g2Fonts.getUTF8Width(DataStr));
     u8g2Fonts.setCursor(xColumn2 - u8g2Fonts.getUTF8Width(DataStr), wzCarsLine);
     u8g2Fonts.print((int)round(cars_daily));
 
     // print cars counted last hour
-    itoa((int)(cars_last_hour), DataStr,10);
+    itoa((int)round(cars_last_hour), DataStr,10);
     u8g2Fonts.setCursor(xColumn4 - u8g2Fonts.getUTF8Width(DataStr), wzCarsLine);
     u8g2Fonts.print((int)round(cars_last_hour));
 
     // print heavy_vehicles_daily
     u8g2Fonts.setCursor(xColumn1, wzHeavyVehiclesLine);
     u8g2Fonts.print(wzHeavyVehiclesStr);
-    itoa((int)(heavy_vehicles_daily), DataStr,10);
+    itoa((int)round(heavy_vehicles_daily), DataStr,10);
+    Log.verbose(F("heavy_vehicles_daily: %s - DataStr: %s"), String(heavy_vehicles_daily), DataStr);
+    Log.verbose(F("heavy_vehicles_daily width: %d"), u8g2Fonts.getUTF8Width(DataStr));
     u8g2Fonts.setCursor(xColumn2 - u8g2Fonts.getUTF8Width(DataStr), wzHeavyVehiclesLine);
     u8g2Fonts.print((int)round(heavy_vehicles_daily));
  
     // print heavy_cars counted last hour
-    itoa((int)(heavy_vehicles_last_hour), DataStr,10);
+    itoa((int)round(heavy_vehicles_last_hour), DataStr,10);
     u8g2Fonts.setCursor(xColumn4 - u8g2Fonts.getUTF8Width(DataStr), wzHeavyVehiclesLine);
     u8g2Fonts.print((int)round(heavy_vehicles_last_hour));
 
@@ -1034,6 +1091,9 @@ bool sendHeartbeat(WiFiClient& client) {
   
   // Add the objects
   request["app_id"] = "wzepaper";
+  request["build_version"] = WZVersion;
+  request["build_date"] = BUILD_DATE;
+  request["bootcount"] = BootCount;
   request["device_id"] = wzDeviceId;
   request["segment_id"] = WZConfig.tr_segmentid;
   request["segment_name"] = WZConfig.tr_segmentname;
@@ -1053,15 +1113,22 @@ bool sendHeartbeat(WiFiClient& client) {
   request["sleeptime"] = WZConfig.tr_SleepTime;
   request["updateminute"] = WZConfig.tr_UpdateMinute;
   request["wakeuptime"] = WZConfig.tr_WakeupTime;
-  request["bootcount"] = BootCount;
+  request["dailytrafficsum"] = DailyTrafficSum;
+  request["wificonnectionsfailed"] = WiFiConnectionsFailed;
+  request["ntprequestsfailed"] = NTPRequestsFailed;
+  request["trapierror"] = TRAPIError;
+  request["trafficdatarequestsfailed"] = TrafficDataRequestsFailed;
+  request["sendheartbeatsfailed"] = SendHeartbeatsFailed;
 
   serializeJson(request, httpMessage);
+
   // Serial.print("JSON httpMessage length: ");
   // Serial.println(httpMessage.length());
   // Serial.print("JSON httpMessage: ");
   // Serial.println(httpMessage);
 
-  while ( ( httpConnectionAttempts < 10 ) && ( httpStatus != 200 )  ) {
+  httpConnectionAttempts = 0;
+  while ( ( httpConnectionAttempts < 6 ) && ( httpStatus != 200 )  ) {
     client.stop();
 
     // we MUST ensure, that a trailing / is appended to hb_apiurl
@@ -1080,14 +1147,20 @@ bool sendHeartbeat(WiFiClient& client) {
     Log.verbose(F("httpConnectionAttempts: >%d< - HTTP status is: >%d<"), httpConnectionAttempts, httpStatus);
     
     if ( httpStatus != 200 ) {
-      Log.verbose(F("Wait some seconds before next attempt"));
-      delay(5000); // wait some seconds for next connection attempt
+      Log.verbose(F("Wait 10 seconds before next attempt"));
+      delay(10000); // wait 10 seconds for next connection attempt
     }
 
   }
   // 
   if ( httpStatus != 200 ) {
     Log.error(F("ERROR: HTTP status is: >%d<"), httpStatus);
+    SendHeartbeatsFailed++;
+    Log.error(F("ERROR: SendHeartbeatsFailed counter: >%d<"), SendHeartbeatsFailed);
+    if ( BootCount == 1  ) {
+      sprintf(display_message_buffer, "ERROR: heartbeat connection failed: %d attempts, Status: >%d<", httpConnectionAttempts, httpStatus);
+      displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
+    }
     return false; // break data processing
   }
 
@@ -1106,9 +1179,9 @@ void setup() {
   delay(1000);
 
   setupLogging();
-   
-  Log.info(F("Build date: %s"), BUILD_DATE);
   delay(100);
+  
+  Log.info(F("Version: %s Build: %s"), WZVersion, BUILD_DATE);
 
   // generate device specific id
   wzDeviceId = String((uint16_t)(ESP.getEfuseMac() >> 32), HEX);
@@ -1116,6 +1189,7 @@ void setup() {
   wzWiFiId = "WZePaperDisplay-" + wzDeviceId;
   // Serial.print("wzWiFiId: ");
   // Serial.println(wzWiFiId);
+  Log.info(F("wzDeviceId: %s"), wzDeviceId);
    
 #ifdef WAVESHARE_DRIVER_HAT_V2_1
   // we MUST use the extended display.init function with four parameters to avoid Busy Timeout
@@ -1210,17 +1284,24 @@ void setup() {
 
   } // BootCount == 1
   
+  Log.info(F("WiFiConnectionsFailed counter: >%d<"), WiFiConnectionsFailed);
+  Log.info(F("NTPRequestsFailed counter: >%d<"), NTPRequestsFailed);
+  Log.info(F("TrafficDataRequestsFailed counter: >%d<"), TrafficDataRequestsFailed);
+  Log.info(F("SendHeartbeatsFailed counter: >%d<"), SendHeartbeatsFailed);
+  Log.info(F("DailyTrafficSum: >%d<"), DailyTrafficSum);
+  Log.info(F("SavedDay: >%d<"), SavedDay);
+
   // set text messages for ePaper based on configured language
   setMessagesByLanguage();
 
   if (startWiFi() == WL_CONNECTED && setupTime() == true ) {
-    if ( CurrentHour >= atoi(WZConfig.tr_WakeupTime) && CurrentHour <= atoi(WZConfig.tr_SleepTime) ) {
+    if ( CurrentHour >= atoi(WZConfig.tr_WakeupTime) && CurrentHour < atoi(WZConfig.tr_SleepTime) ) {
       WiFiClient client;
       delay(3000);
 
-      Log.verbose(F("CurrentHour: %s"), String(CurrentHour));
-      Log.verbose(F("CurrentMin: %s"), String(CurrentMin));
-      Log.verbose(F("CurrentSec: %s"), String(CurrentSec));
+      Log.verbose(F("CurrentHour: %d"), CurrentHour);
+      Log.verbose(F("CurrentMin: %d"), CurrentMin);
+      Log.verbose(F("CurrentSec: %d"), CurrentSec);
           
       // recalculate sleep time in seconds
       if ( CurrentMin < atoi(WZConfig.tr_UpdateMinute)) {
@@ -1230,15 +1311,20 @@ void setup() {
       } 
 
       if ( CurrentMin >= atoi(WZConfig.tr_UpdateMinute) ) {
-        Log.verbose(F("get traffic data and update display ..."));
+        Log.verbose(F("get traffic data and update display"));
         // request traffic data from Telraam API
-        if (getTrafficData(client)) {
-          // show traffic data on ePaper display
-          displayTrafficData();
-          // don't send heartbeat if hb_apiurl is not defined
-          if ( strlen(WZConfig.hb_apiurl) > 0 ) {
-            sendHeartbeat(client);
+        if ( getTrafficData(client) ) {
+          // show traffic data on display
+          if ( TrafficSumValid ) {
+            displayTrafficData();
           }
+        } else {
+          Log.error(F("No valid traffic data, retry in 300 seconds"));
+          TIME_TO_SLEEP = 300; // no valid traffic data: retry in 300 seconds
+        }
+        // don't send heartbeat if hb_apiurl is not defined
+        if ( strlen(WZConfig.hb_apiurl) > 0 ) {
+          sendHeartbeat(client);
         }
       } else {
         if ( BootCount == 1  ) {
@@ -1246,9 +1332,16 @@ void setup() {
           displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
         }
       }
+    } else {
+      Log.info(F("current hour %d not inside time window from %d - %d"), CurrentHour, atoi(WZConfig.tr_WakeupTime), atoi(WZConfig.tr_SleepTime));
+      if ( BootCount == 1  ) {
+        sprintf(display_message_buffer, "current hour %d not inside time window from %d - %d", CurrentHour, atoi(WZConfig.tr_WakeupTime), atoi(WZConfig.tr_SleepTime));
+        displayMessage(display_message_buffer, wzGenInfoLine, u8g2_font_lubB14_tf);
+      }
     }
   } else {
-    // no WiFi connection: restart device in 5 minutes (300 seconds)
+    // no WiFi connection: retry in 300 seconds
+    Log.error(F("No WiFi connection, retry in 300 seconds"));
     TIME_TO_SLEEP = 300;
   }
 
@@ -1260,7 +1353,7 @@ void setup() {
   // pinMode(EPD_CLK, INPUT_PULLUP); // TODO: for saving power in deep sleep
 
 	esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
-	Log.info(F("Prepare ESP32 to sleep for %d seconds"), TIME_TO_SLEEP);
+  Log.info(F("Prepare ESP32 to sleep for %d seconds"), TIME_TO_SLEEP);
 	// goto deep sleep now
   Log.info(F("going into deep sleep mode in 5 seconds, by by ..."));
   delay(5000);

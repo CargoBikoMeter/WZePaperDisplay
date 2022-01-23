@@ -97,7 +97,7 @@ struct WZConfig_s {
   char hb_authkey[71];        // API token to access the heartbeat server - max length: 70
 };
 
-#define LOGLEVEL LOG_LEVEL_INFO // SILENT|FATAL|ERROR|WARNING|INFO|NOTICE|TRACE|VERBOSE
+#define LOGLEVEL LOG_LEVEL_VERBOSE // SILENT|FATAL|ERROR|WARNING|INFO|NOTICE|TRACE|VERBOSE
 
 // define on of the supported display models
 //#define DISPLAY_MODEL_750c_Z90
