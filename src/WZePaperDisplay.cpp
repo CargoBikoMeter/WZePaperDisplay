@@ -61,7 +61,7 @@ extern int  configServerUptimeMax;
 extern void eraseConfigData();
 extern WZConfig_s WZConfig;
 
-const char *WZVersion = "1.0.1";
+const char *WZVersion = "1.0.2";
 
 // pin for reading commands, commands depends from the time the button is pressed
 // calibration command: button more then 10 seconds pressed 
@@ -86,7 +86,7 @@ String wzDeviceId, wzWiFiId;
 // the system should start always every hour at minute WZConfig.tr_UpdateMinute 
 // so we must recalculate the sleep time after getting the last time from ntp server
 // TIME_TO_SLEEP = (atoi(WZConfig.tr_UpdateMinute) - CurrentMin) * 60;
-uint16_t TIME_TO_SLEEP = 3600;     // one hour deep sleep time (seconds)
+uint16_t TIME_TO_SLEEP = 3600;     // one hour deep sleep time ( 3600 seconds)
 
 // we count the boot cycles after powering up the device
 RTC_DATA_ATTR int BootCount = 0;       // saved in RTC memory area
@@ -618,7 +618,8 @@ boolean UpdateLocalTime() {
 
   Log.verbose(F("CurrentDay: %d - SavedDay: %d"), CurrentDay, SavedDay);
   // save CurrentDay into RTC menory, if a new day has arrived and reset DailyTrafficSum
-  if ( CurrentDay > SavedDay ) {
+  // CurrentDay == 1 : ensures counter reset at the first day of new month
+  if ( CurrentDay > SavedDay || CurrentDay == 1 ) {
     SavedDay = CurrentDay;
     DailyTrafficSum = 0; 
     Log.verbose(F("new day has arrived, DailyTrafficSum resettet: %d"), DailyTrafficSum);
@@ -1352,7 +1353,7 @@ void setup() {
   display.hibernate();
   // pinMode(EPD_CLK, INPUT_PULLUP); // TODO: for saving power in deep sleep
 
-	esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
+  esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
   Log.info(F("Prepare ESP32 to sleep for %d seconds"), TIME_TO_SLEEP);
 	// goto deep sleep now
   Log.info(F("going into deep sleep mode in 5 seconds, by by ..."));
