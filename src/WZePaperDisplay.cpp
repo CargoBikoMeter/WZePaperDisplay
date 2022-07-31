@@ -61,16 +61,17 @@ extern int  configServerUptimeMax;
 extern void eraseConfigData();
 extern WZConfig_s WZConfig;
 
-const char *WZVersion = "1.0.2";
+const char *WZVersion = "1.1.0";
 
 // pin for reading commands, commands depends from the time the button is pressed
 // calibration command: button more then 10 seconds pressed 
 const uint8_t buttonPin       = 0;     // command button: USER (BOOT) button on device is GPIO0
+const int touchPin = T3;               // touch button: touch button on device is GPIO15 (D15) 
 
 uint16_t WAIT_TIME_FOR_BUTTON = 10000; // give user time to press USER button, in milliseconds
-int buttonState               = HIGH;  // if USER (BOOT)_KEY not pressed: state is HIGH
-uint8_t buttonread            = 0;
-uint8_t CMD_COUNTER           = 0;     // count the seconds the USER (BOOT)_KEY is pressed
+bool ConfigPinsState              = 0;  //
+bool ConfigPinsPressed        = 0;
+uint8_t CMD_COUNTER           = 0;  // count the seconds the USER (BOOT)_KEY is pressed
 
 const uint8_t START_CONFIG_SERVER_COUNTER = 15;  // < 15s: start configuration server
 const uint8_t CONFIG_RESET_COUNTER        = 20; //  > 20s: reset config data in NVS flash area
@@ -1020,28 +1021,38 @@ void displayTrafficData()
   while (display.nextPage());
 }
 
-// check if user has pressed button for configuration menue
-void checkUserButton() {
-  Log.info(F("checkUserButton"));
+// check if user has pressed button or touchPin for configuration menue
+void checkConfigPinsPressed() {
+  Log.info(F("checkConfigPinsPressed"));
 
   CMD_COUNTER = 0;
-  // check if button is pressed, will change from HIGH to LOW
-  buttonread = digitalRead(buttonPin);
-  Log.verbose(F("  buttonread state (pressed=0): %i"), buttonread);
-    
-  if (buttonread == LOW) { //check if button was pressed before and being pressed now
+  // check if button or touchPin are pressed
+  // buttonPin pressed: HIGH -> LOW
+  if ( ! digitalRead(buttonPin) || (touchRead(touchPin) < 20) ) {
+    ConfigPinsPressed = 1;
+  } else {
+    ConfigPinsPressed = 0;
+  }
+
+  Log.verbose(F("  ConfigPinsPressed state (pressed or touched = 1): %i"), ConfigPinsPressed);
+
+  if ( ConfigPinsPressed == 1 ) { //check if button or touchPin was pressed before and being pressed now
     
     // show configuration screen messages
     displayConfigScreen();
 
-    if (buttonState == HIGH)
+    if (ConfigPinsState == 0)
     {
-      buttonState = LOW;
-      Log.verbose(F("  button pressed"));
-      // now count the seconds the button is pressed
-      while ( buttonState != HIGH )
+      ConfigPinsState = 1;
+      Log.verbose(F("  Config button or touchPin pressed"));
+      // now count the seconds the button ore touchPin is pressed
+      while ( ConfigPinsState != 0 )
       {
-        buttonState = digitalRead(buttonPin);
+        if ( ! digitalRead(buttonPin) || (touchRead(touchPin) < 20) ) {
+          ConfigPinsState = 1;
+        } else {
+          ConfigPinsState = 0;
+        }
         CMD_COUNTER++;
         Log.verbose(F(" CMD_COUNTER: %i"), CMD_COUNTER);
 
@@ -1050,7 +1061,8 @@ void checkUserButton() {
           displayMessage(display_message_buffer, 130, u8g2_font_lubB14_tf);
           
           // erase configuration data
-          eraseConfigData();
+          Log.info(F("eraseConfigData"));
+          //eraseConfigData();
         }
 
         // increment counter every second
@@ -1067,19 +1079,19 @@ void checkUserButton() {
           startConfigServer();   
 
           CMD_COUNTER = 0;  // reset counter
-          buttonState = HIGH;
+          ConfigPinsState = 0;
       }
 
       CMD_COUNTER = 0;   // reset counter
-      buttonState = HIGH;
+      ConfigPinsState = 0;
     }
   }
   else {
-    if (buttonState == LOW) {
-      buttonState = HIGH;
+    if (ConfigPinsState == 1) {
+      ConfigPinsState = 0;
     }
   }
-  Log.verbose(F("checkUserButton - end"));
+  Log.verbose(F("checkConfigPinsPressed - end"));
 }
 
 // send heartbeat to external server
@@ -1237,7 +1249,7 @@ void setup() {
   
     // read the state of the user button value now
     // config server only starts after pressing the user button for 1 second
-    checkUserButton();   
+    checkConfigPinsPressed();   
     
     // check important configuration data
     if ( strlen(WZConfig.Language) == 0 ) {

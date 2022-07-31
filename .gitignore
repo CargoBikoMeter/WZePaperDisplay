@@ -799,3 +799,116 @@ bin-release/
 .pio/build/az-delivery-devkit-v4/libfe0/WiFiClientSecure/WiFiClientSecure.cpp.o
 .pio/build/az-delivery-devkit-v4/src/configServer.cpp.o
 .pio/build/az-delivery-devkit-v4/src/WZePaperDisplay.cpp.o
+.pio/build/az-delivery-devkit-v4/lib655/libAdafruit GFX Library@1.10.12.a
+.pio/build/az-delivery-devkit-v4/lib655/Adafruit GFX Library@1.10.12/Adafruit_GFX.cpp.o
+.pio/build/az-delivery-devkit-v4/lib655/Adafruit GFX Library@1.10.12/Adafruit_GrayOLED.cpp.o
+.pio/build/az-delivery-devkit-v4/lib655/Adafruit GFX Library@1.10.12/Adafruit_SPITFT.cpp.o
+.pio/build/az-delivery-devkit-v4/lib655/Adafruit GFX Library@1.10.12/glcdfont.c.o
+.pio/build/az-delivery-devkit-v4/libc70/libAdafruit BusIO@1.9.8.a
+.pio/build/az-delivery-devkit-v4/libc70/Adafruit BusIO@1.9.8/Adafruit_BusIO_Register.cpp.o
+.pio/build/az-delivery-devkit-v4/libc70/Adafruit BusIO@1.9.8/Adafruit_I2CDevice.cpp.o
+.pio/build/az-delivery-devkit-v4/libc70/Adafruit BusIO@1.9.8/Adafruit_SPIDevice.cpp.o
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/CMakeLists.txt
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO/component.mk
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/.piopm
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/Adafruit_BusIO_Register.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/Adafruit_BusIO_Register.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/Adafruit_I2CDevice.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/Adafruit_I2CDevice.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/Adafruit_I2CRegister.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/Adafruit_SPIDevice.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/Adafruit_SPIDevice.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/library.properties
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/LICENSE
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/README.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/.github/ISSUE_TEMPLATE.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/.github/PULL_REQUEST_TEMPLATE.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/.github/workflows/githubci.yml
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/examples/i2c_address_detect/i2c_address_detect.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/examples/i2c_readwrite/i2c_readwrite.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/examples/i2c_registers/i2c_registers.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/examples/i2corspi_register/i2corspi_register.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/examples/spi_modetest/spi_modetest.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/examples/spi_readwrite/spi_readwrite.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/examples/spi_register_bits/spi_register_bits.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit BusIO@1.9.8/examples/spi_registers/spi_registers.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/CMakeLists.txt
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library/component.mk
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/.gitignore
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/.piopm
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Adafruit_GFX.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Adafruit_GFX.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Adafruit_GrayOLED.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Adafruit_GrayOLED.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Adafruit_SPITFT_Macros.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Adafruit_SPITFT.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Adafruit_SPITFT.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/gfxfont.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/glcdfont.c
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/library.properties
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/license.txt
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/README.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/.github/ISSUE_TEMPLATE.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/.github/PULL_REQUEST_TEMPLATE.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/.github/workflows/githubci.yml
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMono9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMono12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMono18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMono24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoBold9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoBold12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoBold18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoBold24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoBoldOblique9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoBoldOblique12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoBoldOblique18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoBoldOblique24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoOblique9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoOblique12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoOblique18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeMonoOblique24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSans9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSans12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSans18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSans24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansBold9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansBold12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansBold18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansBold24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansBoldOblique9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansBoldOblique12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansBoldOblique18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansBoldOblique24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansOblique9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansOblique12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansOblique18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSansOblique24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerif9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerif12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerif18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerif24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifBold9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifBold12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifBold18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifBold24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifBoldItalic9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifBoldItalic12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifBoldItalic18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifBoldItalic24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifItalic9pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifItalic12pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifItalic18pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/FreeSerifItalic24pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/Org_01.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/Picopixel.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/Tiny3x3a2pt7b.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/Fonts/TomThumb.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/examples/GFXcanvas/GFXcanvas.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/examples/GFXcanvas/GFXcanvasSerialDemo.cpp
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/examples/GFXcanvas/GFXcanvasSerialDemo.h
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/examples/mock_ili9341/mock_ili9341.ino
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/fontconvert/bdf2adafruit.py
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/fontconvert/fontconvert_win.md
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/fontconvert/fontconvert.c
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/fontconvert/Makefile
+.pio/libdeps/az-delivery-devkit-v4/Adafruit GFX Library@1.10.12/fontconvert/makefonts.sh
