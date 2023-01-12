@@ -160,23 +160,23 @@ void readConfigurationData() {
   hb_authkey.toCharArray(WZConfig.hb_authkey,hb_authkey.length()+1);
 
   Log.verbose(F("readConfigurationData: print configuration data read from NVM"));
-  Log.verbose(F("WIFI_SSID: %s"), WZConfig.WIFI_SSID);
-  Log.verbose(F("WIFI_PASSWORD: %s"), WZConfig.WIFI_PASSWORD);
-  Log.verbose(F("AP_PASSWORD: %s"), WZConfig.AP_PASSWORD);
-  Log.verbose(F("Project URL: %s"), WZConfig.project_url);
-  Log.verbose(F("Telraam API key: %s"), WZConfig.tr_apikey);
-  Log.verbose(F("Telraam segment id: %s"), WZConfig.tr_segmentid);
-  Log.verbose(F("Telraam segment name: %s"), WZConfig.tr_segmentname);
-  Log.verbose(F("wake-up time: %s"), WZConfig.tr_WakeupTime);
-  Log.verbose(F("sleep time: %s"), WZConfig.tr_SleepTime);
-  Log.verbose(F("update minute: %s"), WZConfig.tr_UpdateMinute);
-  Log.verbose(F("Language: %s"), WZConfig.Language);
-  Log.verbose(F("Timezone: %s"), WZConfig.Timezone);
-  Log.verbose(F("ntpServer: %s"), WZConfig.ntpServer);
-  Log.verbose(F("gmtOffset: %s"), WZConfig.gmtOffset);
-  Log.verbose(F("daylightOffset: %s"), WZConfig.daylightOffset);
-  Log.verbose(F("hb_apiurl: %s"), WZConfig.hb_apiurl);
-  Log.verbose(F("hb_authkey: %s"), WZConfig.hb_authkey);
+  Log.verbose(F("WIFI_SSID: >%s<"), WZConfig.WIFI_SSID);
+  Log.verbose(F("WIFI_PASSWORD: >%s<"), WZConfig.WIFI_PASSWORD);
+  Log.verbose(F("AP_PASSWORD: >%s<"), WZConfig.AP_PASSWORD);
+  Log.verbose(F("Project URL: >%s<"), WZConfig.project_url);
+  Log.verbose(F("Telraam API key: >%s<"), WZConfig.tr_apikey);
+  Log.verbose(F("Telraam segment id: >%s<"), WZConfig.tr_segmentid);
+  Log.verbose(F("Telraam segment name: >%s<"), WZConfig.tr_segmentname);
+  Log.verbose(F("wake-up time: >%s<"), WZConfig.tr_WakeupTime);
+  Log.verbose(F("sleep time: >%s<"), WZConfig.tr_SleepTime);
+  Log.verbose(F("update minute: >%s<"), WZConfig.tr_UpdateMinute);
+  Log.verbose(F("Language: >%s<"), WZConfig.Language);
+  Log.verbose(F("Timezone: >%s<"), WZConfig.Timezone);
+  Log.verbose(F("ntpServer: >%s<"), WZConfig.ntpServer);
+  Log.verbose(F("gmtOffset: >%s<"), WZConfig.gmtOffset);
+  Log.verbose(F("daylightOffset: >%s<"), WZConfig.daylightOffset);
+  Log.verbose(F("hb_apiurl: >%s<"), WZConfig.hb_apiurl);
+  Log.verbose(F("hb_authkey: >%s<"), WZConfig.hb_authkey);
 
   preferences.end();
 }
@@ -501,13 +501,13 @@ static const String configIndexDefault =
 
   "<h3>Telraam</h3>"
   "API key"
-  "<input name=tr_apikey placeholder='tr_apikey' type='password' minlength='40' maxlength='40' required value='{tr_apikey}' onclick='resetAPIKey()'>"
-  "<small>API token from your Telraam account - length must equal to: 40</small>"
+  "<input name=tr_apikey placeholder='tr_apikey' type='text' required pattern='[a-zA-Z0-9]{40}' value='{tr_apikey}' onclick='resetAPIKey()'>"
+  "<small>API token from your Telraam account - length must equal to: 40 - allowed pattern:[a-zA-Z0-9]</small>"
    "<hr>"
 
   "API segment id"
-  "<input name=tr_segmentid placeholder='tr_segmentid' type='text' required minlength='10' maxlength='10' pattern='[0-9]{10}' value='{tr_segmentid}'"
-  "<small>Telraam internal street number - length must equal to: 10</small>"
+  "<input name=tr_segmentid placeholder='tr_segmentid' type='text' required pattern='[0-9]{10}' value='{tr_segmentid}'"
+  "<small>Telraam internal street number - length must equal to: 10 - allowed pattern: [0-9]</small>"
   "<hr>"
 
   "display - segment name"
@@ -561,14 +561,14 @@ static const String configIndexExpert =
   "<input name=gmtOffset placeholder='gmtOffset' type='text' required maxlength='39' pattern='[0-9]' value='{gmtOffset}'>"
   "<small>UK normal time is GMT, so GMT Offset is 0, for DE (+1hr) use 3600, "
   "for US (-5hrs) is typically -18000, AU is typically (+8hrs) 28800 "
-  "- max length: 39</small>"
+  "- max length: 39 - allowed pattern: [0-9]</small>"
   "<hr>"
 
   "daylightOffset (in seconds)"
   "<input name=daylightOffset placeholder='daylightOffset' type='text' required maxlength='39' pattern='[0-9]' value='{daylightOffset}'>"
   "<small>In the UK DST is +1hr (3600-secs), other countries (e.g. DE) may use 2hrs (7200-secs) "
   "or 30-mins (1800-secs) or 5.5hrs (19800-secs); ahead of GMT use + offset behind - offset "
-  "- max length: 39</small>"
+  "- max length: 39 - allowed pattern: [0-9]</small>"
 
   "<h3>Heartbeat server (optional)</h3>"
   "URL"
