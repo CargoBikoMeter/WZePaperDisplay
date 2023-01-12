@@ -96,13 +96,15 @@ The universal circuit board with the attached ESP32 and the e-Paper HAT module a
 
 The attached pictures give a good overview of the mechanical structure of the device.
 
+An external touch pin for entering configuration mode can be connected to ESP32 GPIO15 (D15).
+
 
 ## Operation
-After powering on the device for the first time the device must be configured. To start the configuration webserver the BOOT button on the ESP board must be pressed and hold down for a maximum of 15 seconds after first device startup until the e-Paper display is showing the configuration mode menu.
+After powering on the device for the first time the device must be configured. To start the configuration webserver the BOOT button on the ESP board or the external touch pin must be pressed and hold down for a maximum of 15 seconds after first device startup until the e-Paper display is showing the configuration mode menu.
 
-Attention: If the BOOT button will be pressed for more than 20 seconds all currently saved configuration data will be deleted.
+Attention: If the BOOT button or the external touch pin will be pressed for more than 20 seconds all currently saved configuration data will be deleted.
 
-After releasing the BOOT button the e-Paper display shows the configuration mode messages and is waiting for 240 seconds that the user connects to the webserver configuration access point. The name of the WiFi access point and the access password is displayed on the e-Paper display.
+After releasing the BOOT button or the external touch pin the e-Paper display shows the configuration mode messages and is waiting for 240 seconds that the user connects to the webserver configuration access point. The name of the WiFi access point and the access password is displayed on the e-Paper display.
 
 After connecting to the WiFi access point the WZePaperDisplay GUI can be called up in the web browser with the following URL: http://172.20.0.1
 
