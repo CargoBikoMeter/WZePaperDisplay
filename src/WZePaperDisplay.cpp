@@ -61,7 +61,7 @@ extern int  configServerUptimeMax;
 extern void eraseConfigData();
 extern WZConfig_s WZConfig;
 
-const char *WZVersion = "1.1.0";
+const char *WZVersion = "1.1.1";
 
 // pin for reading commands, commands depends from the time the button is pressed
 // calibration command: button more then 10 seconds pressed 
